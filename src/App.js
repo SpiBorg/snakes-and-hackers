@@ -1,24 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
-
+import "./App.css";
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import SimpleBar from "simplebar-react";
+import "simplebar/dist/simplebar.min.css";
+import Footer from "./components/Footer";
+import Content from "./components/Content";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <SimpleBar style={{ maxHeight: "100vh" }}>
+        <Navbar />
+        <Hero />
+        <Content />
+        <Footer />
+      </SimpleBar>
+    </>
   );
 }
 
